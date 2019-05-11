@@ -1,0 +1,233 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	text-decoration: none;
+}
+
+
+#adicionar{
+	position: fixed;
+	width: 50em;
+	float: left;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 1em;
+	box-shadow: 5px 10px 3em #ccc; 
+}
+
+#adicionar form{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+	float: left;
+	width: 80%;
+
+}
+
+#adicionar input[type='text'], textarea{
+	position: relative;
+	border: 1px solid #ccc;
+	margin: 0.2em auto;
+	padding: 0.3em;
+	border-radius: 4px;
+	width: 91%;
+}
+
+#adicionar select{
+	position: relative;
+	border: 1px solid #ccc;
+	margin:0.2em auto;
+	border-radius: 3px;
+
+}
+
+#adicionar span{
+	float: right;
+}
+
+#adicionar textarea{
+	position: relative;
+	border: 1px solid #ccc;
+	margin: 0.2em auto;
+	padding: 0.3em;
+	border-radius: 4px;
+	width: 98.5%;
+	height: 25em;
+	resize: none;
+}
+
+#adicionar .botoes{
+	position: relative;
+	left: 42%;
+	background: transparent;
+	border: none;
+	box-shadow: 5px 10px 13em #000;
+	cursor: pointer;
+	width: 20%;
+	height: 2em;
+	margin: 1em 0;
+	transform: translate(-50%);
+}
+
+#adicionar .botoes[type='submit']:hover{
+	background: rgba(0, 199, 60);
+	border-color: green;
+}
+
+#adicionar .botoes:hover{
+	background: rgb(199, 0, 0);
+	color: #fff;
+}
+
+
+/*INICIO TELA DE CONTEUDO-EDITAR*/
+table{
+	position: relative;
+	left: 50%;
+	top: 25%;
+	text-align: center;
+	border-spacing: 0;
+	border-color: #fff;
+	transform: translate(-50%, -50%);
+}
+
+table tr:first-child{
+	text-transform: uppercase;
+	background: rgb(0, 0, 0);
+	color: #fff;
+	font-size: 1.2em;
+}
+
+table tr{
+	background: #CCC;
+	color: #000;
+	border-color: #f40;
+}
+
+table tr:nth-child(4n+2){
+	background: #fff;
+	color: #000;
+}
+
+table tr a{
+	font-size: 1.7em;
+	border: 1px solid #000;
+	text-align: center;
+	padding-left: 5px;
+	cursor: pointer;
+	padding-right: 5px;
+
+}
+table tr a:first-child:before{
+	content: "\0270f";
+	color: #ff9900;
+}
+
+
+table tr a:before{
+	content: "\02715";
+	color: #f40;
+
+}
+
+#editar{
+	position: fixed;
+	width: 50em;
+	float: left;
+	left: 50%;
+	top: 50%;
+	display: none;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 1em;
+	box-shadow: 5px 10px 3em #ccc;
+}
+
+#editar form{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	float: left;
+	width: 80%;
+}
+
+#editar input[type='text'], textarea{
+	position: relative;
+	border: 1px solid #ccc;
+
+	margin: 0.2em auto;
+	padding: 0.3em;
+	border-radius: 4px;
+	width: 91%;
+}
+
+#editar select{
+	position: relative;
+	border: 1px solid #ccc;
+	margin:0.2em auto;
+	border-radius: 3px;
+
+}
+
+#editar span{
+	float: right;
+}
+
+#editar textarea{
+	position: relative;
+	border: 1px solid #ccc;
+
+	margin: 0.2em auto;
+	padding: 0.3em;
+	border-radius: 4px;
+	width: 98.5%;
+	height: 25em;
+	resize: none;
+}
+
+#editar .botoes{
+	position: relative;
+	left: 40%;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	box-shadow: 5px 10px 4em rgba(0, 0, 0, 0.5);
+	height: 2em;
+	transform: translate(-50%);
+}
+
+#editar .botoes[type='submit']:hover{
+	background: rgba(0, 199, 60);
+}
+
+#editar .botoes:hover{
+	background: rgb(199, 0, 0);
+} 
+
+#editar button{
+	position: relative;
+	margin-top: 10px;
+	float: left;
+	left: 50%;
+	transform: translate(-50%);
+	background: #f40;
+	border: none;
+	box-shadow: 5px 10px 4em rgba(0, 0, 0, 0.5);
+	width: 10em;
+	height: 2em;
+	cursor: pointer;
+}
+
+.nenhum{
+	position: absolute;
+	float: left;
+	left: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
