@@ -2,7 +2,7 @@
 
 <?php
 	require_once("connection.php");
-	
+
 	include("security.php");
 	include("protected.php");
 	$pdo=conectar();
@@ -23,14 +23,14 @@
 				$verificar->execute();
 
 				if($verificar->rowCount()){
-				
+
 					$resultado = $verificar->fetch(PDO::FETCH_OBJ);
 					$_SESSION['level'] = $resultado->privilegios;
-				
+
 					$_SESSION['logado'] = true;
 					header("Location: index.php");
 				}else{
-					
+
 					$errorNot = "Email ou senha incorreto";
 
 				}
@@ -74,7 +74,6 @@
 					<input type="submit" name="login" value="Fazer Login" /><br>
 					<?php if(!empty($errorNot)) {?><div class="error" style="left: 28%"> <?php echo $errorNot ?></div><?php } ?>
 				</form>
-				<!--<span class="notCadas"><a href="?cadastro.php">Não tem uma conta? Clique aqui para criar uma</a></span> -->
 			</div>
 		</div>
 	<?php } ?>
@@ -95,7 +94,7 @@
 								<li><a>Base Comum</a></li>
 							</ul>
 						</li>
-							<?php if(isset($_SESSION['level']) && $_SESSION['level'] >= 1) { ?> 
+							<?php if(isset($_SESSION['level']) && $_SESSION['level'] >= 1) { ?>
 								<li><a>UCP</a>
 									<ul class="sub-menu">
 										<li><a>Conteúdos</a>
@@ -120,19 +119,18 @@
 							<input type="text" id="inputSearch" placeholder="Digite o que deseja pesquisar" />
 							<button type="submit" id="btnSearch"></button>
 						</div>
-						<!--<div id="test"></div>-->
 
 					</nav>
 
 				</section>
 				<div id="banner">
-					
+
 					<img width="100%" height="100%">
-					
+
 					<div class="right control">
 						<button class="next"></button>
 					</div>
-					
+
 					<div class="left control">
 						<button class="previous"></button>
 					</div>
@@ -142,7 +140,7 @@
 			<main>
 				<article class="main-top">
 
-					<?php 
+					<?php
 						$query = $pdo->prepare("SELECT * FROM conteudos ORDER by id DESC LIMIT 4");
 						$query->execute();
 
@@ -153,7 +151,7 @@
 
 						<div class="main-description">
 							<div class="conteudo-galery">
-								<?php 
+								<?php
 									while($r = $query->fetch(PDO::FETCH_OBJ)){ ?>
 										<a href=""><div class="box">
 											<img src="<?php echo "assets/imagens/".strtolower(str_replace('/', '', $r->materia)).".png";?>">
